@@ -1,0 +1,20 @@
+--extra-index-url https://fair.pkg.atmeta.com/fairseq2/whl/pt2.8.0/cu128
+fairseq2==0.6.0
+pyarrow>=20.0.0
+torch==2.8.0
+torchaudio==2.8.0
+numba
+pandas
+numpy
+kenlm
+polars>=1.29.0
+fire
+transformers
+datasets~=3.6.0
+ray>=2.49.0
+soundfile>=0.13.1
+librosa>=0.11.0
+unidecode
+uroman
+retrying
+gradio

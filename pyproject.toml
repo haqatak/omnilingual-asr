@@ -26,10 +26,10 @@ classifiers=[
 
 requires-python = ">=3.10"
 dependencies = [
-    "fairseq2[arrow]>=0.5.2,<=0.6",
+    "fairseq2==0.6.0",
     "pyarrow>=20.0.0",
-    "torch",
-    "torchaudio",
+    "torch==2.8.0",
+    "torchaudio==2.8.0",
     "numba",
     "pandas",
     "numpy",
@@ -49,6 +49,7 @@ dependencies = [
     "uroman",
     "fire",
     "retrying",
+    "gradio",
   ]
   dev = [
     "black~=25.1",
