@@ -1,5 +1,4 @@
---extra-index-url https://download.pytorch.org/whl/cpu
---extra-index-url https://fair.pkg.atmeta.com/fairseq2/whl/pt2.8.0/cpu
+--extra-index-url https://fair.pkg.atmeta.com/fairseq2/whl/pt2.8.0/cu128
 fairseq2==0.6.0
 pyarrow>=20.0.0
 torch==2.8.0

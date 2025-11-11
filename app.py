@@ -7,9 +7,16 @@ import numpy as np
 from omnilingual_asr.models.wav2vec2_llama.lang_ids import supported_langs
 
 # Initialize the ASR pipeline
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+else:
+    device = "cpu"
+
 pipeline = ASRInferencePipeline(
-    model_card="omniASR_CTC_300M",
-    device="cpu",
+    model_card="omnilingual-asr/omnilingual-asr-small",
+    device=device,
 )
 
 def chunk_audio(audio_path, chunk_length_s=30, overlap_s=2):
