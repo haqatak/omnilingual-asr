@@ -39,7 +39,15 @@ Omnilingual ASR is an open-source speech recognition system supporting over 1,60
 
 ## Installation
 
-The models were developed using [fairseq2](https://github.com/facebookresearch/fairseq2), a research-focused sequence modeling toolkit. While we provide a **reference** inference pipeline that works across platforms, audio support requires [libsndfile](https://github.com/facebookresearch/fairseq2?tab=readme-ov-file#system-dependencies) (Mac: `brew install libsndfile`; Windows may need an additional [setup](https://github.com/facebookresearch/fairseq2?tab=readme-ov-file#installing-on-windows)).
+### From PyPI
+
+The easiest way to use Omnilingual ASR is to install it from PyPI. This is recommended for most users who want to use the pre-trained models for inference.
+
+The models were developed using [fairseq2](https://github.com/facebookresearch/fairseq2), a research-focused sequence modeling toolkit. While we provide a **reference** inference pipeline that works across platforms, audio support requires [libsndfile](https://github.com/facebookresearch/fairseq2?tab=readme-ov-file#system-dependencies).
+
+- **macOS**: `brew install libsndfile`
+- **Linux (Debian/Ubuntu)**: `sudo apt-get install -y libsndfile1`
+- **Windows**: May need an additional [setup](https://github.com/facebookresearch/fairseq2?tab=readme-ov-file#installing-on-windows).
 
 ```bash
 # using pip
@@ -47,6 +55,36 @@ pip install omnilingual-asr
 
 # using uv
 uv add omnilingual-asr
+```
+
+### For Local Development
+
+If you want to run the Gradio demo locally or contribute to the project, you'll need to install the dependencies from the `requirements` files.
+
+**Python Dependencies:**
+
+First, create and activate a virtual environment. Then, install the dependencies using the appropriate requirements file for your operating system.
+
+**macOS:**
+```bash
+pip install -r requirements-macos.txt
+```
+
+**Linux:**
+```bash
+pip install -r requirements-linux.txt
+```
+
+This will install all the necessary packages, including `torch`, `torchaudio`, and `gradio`.
+
+After installing the dependencies, you need to install the project in editable mode to ensure the local modules are correctly linked:
+```bash
+pip install -e .
+```
+
+Now you can run the Gradio application:
+```bash
+python app.py
 ```
 
 ## Inference

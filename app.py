@@ -8,8 +8,8 @@ from omnilingual_asr.models.wav2vec2_llama.lang_ids import supported_langs
 
 # Initialize the ASR pipeline
 pipeline = ASRInferencePipeline(
-    model_card="omnilingual-asr/omnilingual-asr-small",
-    device="mps" if torch.backends.mps.is_available() else "cpu",
+    model_card="omniASR_CTC_300M",
+    device="cpu",
 )
 
 def chunk_audio(audio_path, chunk_length_s=30, overlap_s=2):
